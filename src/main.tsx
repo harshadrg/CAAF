@@ -2,7 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
-import { BrowserRouter, Routes, Route } from 'react-router';
+import { Routes, Route, HashRouter } from 'react-router';
 import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
@@ -29,8 +29,8 @@ const routes = (
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>{routes}</Routes>
-    </BrowserRouter>
+    </HashRouter>
   </StrictMode>,
 )

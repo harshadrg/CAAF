@@ -184,7 +184,7 @@ export default function CAAFAdvantageSection() {
                         to="/about"
                         variant="ghost"
                         size="md"
-                        className="font-semibold text-(--color-primary) hover:text-[var(--color-primary-dark)] group"
+                        className="font-semibold text-(--color-primary) hover:text-(--color-primary-dark) group"
                     >
                         Learn More About Our Approach
                         <ArrowRight
