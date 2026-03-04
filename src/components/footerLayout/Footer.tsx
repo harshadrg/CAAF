@@ -6,13 +6,13 @@ import LOGO_LIGHT from '../../assets/caaf-logo-light.svg'
 import LOGO_DARK from '../../assets/caaf-logo-dark.svg'
 
 const serviceLinks = [
-    { to: '/services', label: 'Compliance & Regulatory Advisory' },
-    { to: '/services', label: 'Audit & Assurance' },
-    { to: '/services', label: 'GRC Advisory' },
+    { to: '/services#compliance', label: 'Compliance & Regulatory Advisory' },
+    { to: '/services#audit', label: 'Audit & Assurance' },
+    { to: '/services#grc', label: 'GRC Advisory' },
     { to: '/virtual-services', label: 'Virtual Executive Services' },
-    { to: '/services', label: 'Cybersecurity Advisory' },
-    { to: '/services', label: 'IT & OT Security Advisory' },
-    { to: '/services', label: 'Secure Digital Engineering' },
+    { to: '/services#cybersecurity', label: 'Cybersecurity Advisory' },
+    { to: '/services#it-ot', label: 'IT & OT Security Advisory' },
+    { to: '/services#digital-engineering', label: 'Secure Digital Engineering' },
 ];
 
 const quickLinks = [
