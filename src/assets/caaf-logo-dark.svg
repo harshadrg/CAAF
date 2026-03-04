@@ -1,0 +1,52 @@
+<svg viewBox="0 0 420 100" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;900&amp;display=swap');
+    .wm { font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 38px; }
+    .sub { font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 9.5px; letter-spacing: 0.22em; text-transform: uppercase; }
+  </style>
+  <defs>
+    <linearGradient id="b1" x1="29" y1="13.63" x2="92" y2="50" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#bfdbfe"/>
+      <stop offset="45%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+    <linearGradient id="a1" x1="92" y1="50" x2="29" y2="86.37" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#fde68a"/>
+      <stop offset="48%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#92400e"/>
+    </linearGradient>
+    <linearGradient id="t1" x1="29" y1="13.63" x2="8" y2="50" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#99f6e4"/>
+      <stop offset="50%" stop-color="#0d9488"/>
+      <stop offset="100%" stop-color="#134e4a"/>
+    </linearGradient>
+    <linearGradient id="cGradDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#93c5fd" />
+      <stop offset="100%" stop-color="#1e3a8a" />
+    </linearGradient>
+  </defs>
+
+  <g>
+    <polygon points="50,50 29,13.63 71,13.63 92,50" fill="url(#b1)"/>
+    <polygon points="50,50 92,50 71,86.37 29,86.37" fill="url(#a1)"/>
+    <polygon points="50,50 29,86.37 8,50 29,13.63" fill="url(#t1)"/>
+    <polygon points="92,50 71,86.37 29,86.37 8,50 29,13.63 71,13.63" fill="none" stroke="white" stroke-opacity="0.12" stroke-width="1.26"/>
+    <line x1="50" y1="50" x2="92" y2="50" stroke="white" stroke-width="2.1" stroke-opacity="0.88"/>
+    <line x1="50" y1="50" x2="29" y2="86.37" stroke="white" stroke-width="2.1" stroke-opacity="0.88"/>
+    <line x1="50" y1="50" x2="29" y2="13.63" stroke="white" stroke-width="2.1" stroke-opacity="0.88"/>
+    <circle cx="50" cy="50" r="5.7" fill="white" opacity="0.95"/>
+  </g>
+
+  <line x1="110" y1="20" x2="110" y2="80" stroke="rgba(255,255,255,0.1)" stroke-width="1.5" />
+
+  <text x="135" y="55" class="wm">
+    <tspan fill="url(#cGradDark)">C</tspan><tspan fill="#eef4ff">AAF</tspan>
+  </text>
+  <text x="135" y="75" class="sub">
+    <tspan fill="#93c5fd">Compliance</tspan>
+    <tspan fill="rgba(255,255,255,0.22)">  ·  </tspan>
+    <tspan fill="#fcd34d">Audit</tspan>
+    <tspan fill="rgba(255,255,255,0.22)">  ·  </tspan>
+    <tspan fill="#5eead4">Advisory</tspan>
+  </text>
+</svg>
