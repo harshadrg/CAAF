@@ -1,8 +1,18 @@
+import { Outlet } from "react-router"
+import Header from "./components/headerLayout/Header"
+import Footer from "./components/footerLayout/Footer"
+
 function App() {
 
   return (
     <>
-      <h1>{import.meta.env.VITE_COMPANY_NAME}</h1>
+      <div className="flex flex-col min-h-screen w-full overflow-x-hidden">
+        <Header />
+        <main className="flex-1 w-full" id="main-content">
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
     </>
   )
 }
