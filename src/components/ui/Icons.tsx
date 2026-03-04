@@ -385,6 +385,20 @@ export const HeartPulse = (p: IconProps) => (
 // CONTACT & COMMUNICATION ICONS
 // ========================================
 
+export const Connect = (p: IconProps) => (
+    <IconBase {...p}>
+        <circle cx="12" cy="4" r="2" />
+        <circle cx="5" cy="14" r="2" />
+        <circle cx="19" cy="14" r="2" />
+        <circle cx="12" cy="20" r="2" />
+        <line x1="12" y1="6" x2="12" y2="9" />
+        <path d="M12 9 C12 12 5 12 5 12" />
+        <path d="M12 9 C12 12 19 12 19 12" />
+        <path d="M5 16 C5 18 12 18 12 18" />
+        <path d="M19 16 C19 18 12 18 12 18" />
+    </IconBase>
+);
+
 export const Mail = (p: IconProps) => (
     <IconBase {...p}>
         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
@@ -534,6 +548,7 @@ export const Icons = {
     Cpu,
     Code,
     HeartPulse,
+    Connect,
     Mail,
     Phone,
     MapPin,
