@@ -1,0 +1,321 @@
+@import "tailwindcss";
+
+/* Tell Tailwind v4 to use .dark CLASS (not prefers-color-scheme) for all dark: utilities */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+    /* --- Primary: Professional Blue (FIXED — was oklch(45% 0.18 243)) --- */
+    --color-primary: oklch(55% 0.22 243);
+    --color-primary-dark: oklch(46% 0.20 243);
+    --color-primary-light: oklch(68% 0.20 243);
+
+    /* --- Secondary: Accent Gold --- */
+    --color-secondary: oklch(62% 0.18 65);
+    --color-secondary-dark: oklch(54% 0.17 65);
+    --color-secondary-light: oklch(78% 0.15 80);
+
+    /* --- Accent: Technology Teal --- */
+    --color-accent: oklch(55% 0.13 185);
+    --color-accent-dark: oklch(45% 0.13 185);
+    --color-accent-light: oklch(75% 0.13 185);
+
+    /* --- Subtle tints (PRIORITY 6) --- */
+    --color-primary-subtle: color-mix(in oklch, var(--color-primary) 10%, transparent);
+    --color-secondary-subtle: color-mix(in oklch, var(--color-secondary) 10%, transparent);
+    --color-accent-subtle: color-mix(in oklch, var(--color-accent) 10%, transparent);
+
+    /* --- Backgrounds (Light Mode) --- */
+    --color-background: oklch(98% 0.01 243);
+    --color-surface: oklch(100% 0 0 / 80%);
+    --color-card: oklch(100% 0 0 / 90%);
+    --color-elevated: oklch(100% 0 0 / 95%);
+
+    /* --- Text (Light Mode) --- */
+    --color-text-primary: oklch(20% 0.03 243);
+    --color-text-secondary: oklch(45% 0.04 243);
+    --color-text-muted: oklch(55% 0.03 243);
+    --color-text-inverse: oklch(100% 0 0);
+
+    /* --- Borders (Light Mode) --- */
+    --color-border: oklch(92% 0.01 243 / 80%);
+    --color-border-light: oklch(96% 0.01 243 / 60%);
+    --color-border-strong: oklch(85% 0.02 243);
+
+    /* --- Semantic States --- */
+    --color-success: oklch(65% 0.17 150);
+    --color-error: oklch(60% 0.20 25);
+    --color-warning: oklch(75% 0.15 75);
+    --color-info: oklch(65% 0.15 243);
+
+    /* --- Button text tokens --- */
+    --color-button-text: oklch(100% 0 0);
+    --color-button-text-secondary: oklch(18% 0.06 65);
+
+    /* --- Shadows --- */
+    --color-shadow: rgba(15, 23, 42, 0.1);
+
+    --color-*: initial;
+}
+
+/* Dark Mode — triggered by .dark class on <html> (set by ThemeToggle) */
+.dark {
+    /* Primary */
+    --color-primary: oklch(55% 0.18 243);
+    --color-primary-dark: oklch(45% 0.18 243);
+    --color-primary-light: oklch(75% 0.14 243);
+
+    /* Secondary */
+    --color-secondary: oklch(65% 0.20 65);
+    --color-secondary-dark: oklch(57% 0.18 65);
+    --color-secondary-light: oklch(80% 0.16 80);
+    --color-button-text-secondary: oklch(15% 0.05 65);
+
+    /* Subtle tints — re-evaluated against dark-mode token values */
+    --color-primary-subtle: color-mix(in oklch, var(--color-primary) 10%, transparent);
+    --color-secondary-subtle: color-mix(in oklch, var(--color-secondary) 10%, transparent);
+    --color-accent-subtle: color-mix(in oklch, var(--color-accent) 10%, transparent);
+
+    --color-accent: oklch(65% 0.13 185);
+    --color-accent-dark: oklch(55% 0.13 185);
+    --color-accent-light: oklch(80% 0.13 185);
+
+    /* Backgrounds */
+    --color-background: oklch(18% 0.02 243);
+    --color-background-gradient: linear-gradient(135deg, oklch(18% 0.02 243) 0%, oklch(13% 0.03 243) 100%);
+    --color-surface: oklch(22% 0.03 243);
+    --color-card: oklch(25% 0.03 243);
+    --color-elevated: oklch(30% 0.03 243);
+
+    /* Text */
+    --color-text-primary: oklch(95% 0.01 243);
+    --color-text-secondary: oklch(85% 0.02 243);
+    --color-text-muted: oklch(70% 0.02 243);
+    --color-text-inverse: oklch(20% 0.03 243);
+
+    /* Borders */
+    --color-border: oklch(30% 0.03 243);
+    --color-border-light: oklch(25% 0.03 243);
+    --color-border-strong: oklch(40% 0.04 243);
+
+    /* States */
+    --color-success: oklch(75% 0.17 150);
+    --color-error: oklch(70% 0.20 25);
+    --color-warning: oklch(80% 0.15 75);
+    --color-info: oklch(75% 0.15 243);
+
+    --color-shadow: rgba(0, 0, 0, 0.5);
+}
+
+/* =============================================
+   Global CSS Variables & Utility Config
+   ============================================= */
+:root {
+    /* --- Brand Colors (Light Mode) --- */
+    --color-primary: oklch(55% 0.22 243);
+    --color-primary-dark: oklch(46% 0.20 243);
+    --color-primary-light: oklch(68% 0.20 243);
+
+    --color-secondary: oklch(62% 0.18 65);
+    --color-secondary-dark: oklch(54% 0.17 65);
+    --color-secondary-light: oklch(78% 0.15 80);
+    --color-button-text-secondary: oklch(18% 0.06 65);
+
+    --color-accent: oklch(55% 0.13 185);
+    --color-accent-dark: oklch(45% 0.13 185);
+    --color-accent-light: oklch(75% 0.13 185);
+
+    /* Subtle tints */
+    --color-primary-subtle: color-mix(in oklch, var(--color-primary) 10%, transparent);
+    --color-secondary-subtle: color-mix(in oklch, var(--color-secondary) 10%, transparent);
+    --color-accent-subtle: color-mix(in oklch, var(--color-accent) 10%, transparent);
+
+    --color-background-gradient: linear-gradient(135deg, oklch(98% 0.02 243) 0%, oklch(95% 0.04 250) 100%);
+    --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    --gradient-secondary: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
+    --gradient-hero: linear-gradient(135deg, oklch(15% 0.04 243) 0%, oklch(25% 0.06 243) 50%, oklch(15% 0.04 243) 100%);
+
+    --shadow-sm: 0 1px 2px 0 var(--color-shadow);
+    --shadow-md: 0 4px 6px -1px var(--color-shadow), 0 2px 4px -1px var(--color-shadow);
+    --shadow-lg: 0 10px 15px -3px var(--color-shadow), 0 4px 6px -2px var(--color-shadow);
+    --shadow-xl: 0 20px 25px -5px var(--color-shadow), 0 10px 10px -5px var(--color-shadow);
+
+    --transition-fast: 150ms;
+    --transition-normal: 300ms;
+    --transition-slow: 500ms;
+
+    /* ─── Hero Section Tokens ─── */
+    --color-hero-from: oklch(16% 0.05 243);
+    --color-hero-mid: oklch(31% 0.20 261);
+    --color-hero-mid2: oklch(27% 0.10 219);
+
+    --color-hero-accent-gold: oklch(63% 0.16 55);
+    --color-hero-accent-gold-light: oklch(72% 0.17 65);
+    --color-hero-accent-gold-dark: oklch(52% 0.14 55);
+
+    --color-hero-accent-blue: oklch(62% 0.21 258);
+
+    --color-hero-glow-blue: oklch(62% 0.21 258);
+    --color-hero-glow-teal: oklch(52% 0.13 183);
+}
+
+/* Dark mode hero overrides */
+.dark {
+    --color-hero-from: oklch(12% 0.04 243);
+    --color-hero-mid: oklch(27% 0.21 261);
+    --color-hero-mid2: oklch(22% 0.11 219);
+
+    --color-hero-accent-gold: oklch(67% 0.17 55);
+    --color-hero-accent-gold-light: oklch(76% 0.18 65);
+    --color-hero-accent-gold-dark: oklch(57% 0.15 55);
+
+    --color-hero-accent-blue: oklch(66% 0.22 258);
+
+    --color-hero-glow-blue: oklch(66% 0.22 258);
+    --color-hero-glow-teal: oklch(58% 0.14 183);
+}
+
+/* =============================================
+   Base Styles
+   ============================================= */
+/* Fonts loaded via <link> tags in index.html — see Step 2 below */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:not(a):not(button):not([class*="transition"]) {
+    transition: background-color var(--transition-normal) ease-in-out,
+        border-color var(--transition-normal) ease-in-out,
+        color var(--transition-normal) ease-in-out,
+        box-shadow var(--transition-normal) ease-in-out;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@layer base {
+    body {
+        background: var(--color-background-gradient, var(--color-background));
+        color: var(--color-text-primary);
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        line-height: 1.2;
+        color: var(--color-text-primary);
+    }
+
+    h1 {
+        font-size: clamp(2.25rem, 5vw, 3.75rem);
+        letter-spacing: -0.02em;
+    }
+
+    h2 {
+        font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+        letter-spacing: -0.01em;
+    }
+
+    h3 {
+        font-size: clamp(1.5rem, 2.5vw, 2rem);
+    }
+
+    p {
+        color: var(--color-text-secondary);
+        line-height: 1.75;
+        margin-bottom: 1rem;
+    }
+
+    a:not([class]) {
+        color: var(--color-primary);
+        text-decoration: none;
+        transition: color var(--transition-fast) ease;
+    }
+
+    a:not([class]):hover {
+        color: var(--color-primary-light);
+    }
+}
+
+/* =============================================
+   Utility Classes
+   ============================================= */
+.section-padding {
+    padding: clamp(4rem, 10vh, 8rem) 1.5rem;
+}
+
+.container-max {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+}
+
+.card-hover {
+    transition: transform var(--transition-fast) ease-out,
+        box-shadow var(--transition-fast) ease-out;
+}
+
+.card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+}
+
+/* =============================================
+   Accessibility & Scrollbar
+   ============================================= */
+:focus-visible {
+    outline: 3px solid var(--color-primary-light);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-surface);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-border-strong);
+    border-radius: 10px;
+    border: 2px solid var(--color-surface);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
+}
+
+/* =============================================
+   Components
+   ============================================= */
+@layer components {
+
+    .glass-panel {
+        @apply bg-(--color-surface) backdrop-blur-lg border border-(--color-border) shadow-sm;
+    }
+
+    .glass-card {
+        @apply bg-(--color-surface) backdrop-blur-lg border border-(--color-border) shadow-sm rounded-xl transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-(--color-elevated);
+    }
+}
