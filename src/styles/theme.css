@@ -54,7 +54,8 @@
     /* --- Shadows --- */
     --color-shadow: rgba(15, 23, 42, 0.1);
 
-    --color-*: initial;
+    --color-white: oklch(100% 0 0);
+    --color-black: oklch(0% 0 0);
 }
 
 /* Dark Mode — triggered by .dark class on <html> (set by ThemeToggle) */

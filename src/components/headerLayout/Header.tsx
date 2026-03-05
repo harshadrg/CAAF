@@ -50,7 +50,7 @@ export default function Header() {
 
                     {/* Desktop nav */}
                     <nav
-                        className="hidden lg:flex items-center gap-0 xl:gap-1 min-w-0"
+                        className="hidden md:flex items-center gap-0 xl:gap-1 min-w-0"
                         aria-label="Main navigation"
                     >
                         {navLinks.map((link) => (
@@ -83,7 +83,7 @@ export default function Header() {
                             aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
                             aria-expanded={mobileOpen}
                             className="
-                                lg:hidden flex items-center justify-center
+                                md:hidden flex items-center justify-center
                                 w-10 h-10 min-w-10 min-h-10 shrink-0
                                 rounded-lg border border-(--color-border)
                                 bg-(--color-surface) hover:bg-(--color-elevated)
@@ -102,7 +102,7 @@ export default function Header() {
                 {/* Mobile / tablet drawer */}
                 {mobileOpen && (
                     <nav
-                        className="lg:hidden border-t border-(--color-border) bg-(--color-background) py-3 px-4"
+                        className="md:hidden border-t border-(--color-border) bg-(--color-background) py-3 px-4"
                         aria-label="Mobile navigation"
                     >
                         <div className="flex flex-col gap-1">
