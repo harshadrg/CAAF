@@ -70,14 +70,14 @@ export default function HeroSection() {
                             style={{ background: 'var(--color-hero-accent-gold)' }}
                             aria-hidden="true"
                         />
-                        <span className="text-white/80 text-xs font-semibold uppercase tracking-[0.2em]">
+                        <span className="text-(--color-text-secondary) text-xs font-semibold uppercase tracking-[0.2em]">
                             Independent Professional Advisory
                         </span>
                     </div>
 
                     {/* Tagline headline */}
                     <h1
-                        className="text-white mb-6"
+                        className="text-(--color-text-primary) mb-6"
                         style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800 }}
                     >
                         {taglineWords.map((word, i) => (
@@ -92,12 +92,12 @@ export default function HeroSection() {
                     </h1>
 
                     {/* Subheading */}
-                    <p className="text-lg sm:text-xl text-white/80 font-medium mb-4 max-w-2xl">
+                    <p className="text-lg sm:text-xl text-(--color-text-primary)/90 font-medium mb-4 max-w-2xl">
                         Independent Compliance, Audit &amp; Cybersecurity Advisory for Regulated Enterprises.
                     </p>
 
                     {/* Description */}
-                    <p className="text-base text-white/60 leading-relaxed mb-10 max-w-2xl">
+                    <p className="text-base text-(--color-text-secondary) leading-relaxed mb-10 max-w-2xl">
                         {companyName} is a multidisciplinary advisory firm integrating technical expertise, audit rigor,
                         and legal insight to deliver defensible governance, regulatory compliance, and secure
                         digital transformation.
@@ -119,12 +119,12 @@ export default function HeroSection() {
                         {stats.map((stat) => (
                             <div key={stat.label}>
                                 <div
-                                    className="text-2xl font-bold text-white"
+                                    className="text-2xl font-bold text-(--color-text-primary)"
                                     style={{ fontFamily: 'Poppins, sans-serif' }}
                                 >
                                     {stat.value}
                                 </div>
-                                <div className="text-xs text-white/50 uppercase tracking-widest mt-1">
+                                <div className="text-xs text-(--color-text-muted) uppercase tracking-widest mt-1">
                                     {stat.label}
                                 </div>
                             </div>

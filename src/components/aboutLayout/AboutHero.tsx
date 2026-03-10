@@ -1,7 +1,7 @@
 const stats = [
     { value: '15+', label: 'Regulatory Frameworks' },
-    { value: '3',   label: 'Advisory Disciplines'  },
-    { value: '5+',  label: 'Industries Served'     },
+    { value: '3', label: 'Advisory Disciplines' },
+    { value: '5+', label: 'Industries Served' },
 ];
 
 export default function AboutHero() {
@@ -45,16 +45,16 @@ export default function AboutHero() {
 
                     {/* Left: text */}
                     <div className="max-w-2xl">
-                        <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-white/50 mb-5">
+                        <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-(--color-text-muted) mb-5">
                             Who We Are
                         </span>
                         <h1
-                            className="text-white mb-5"
+                            className="text-(--color-text-primary) mb-5"
                             style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800 }}
                         >
                             Independent. Structured. Accountable.
                         </h1>
-                        <p className="text-base sm:text-lg text-white/70 leading-relaxed">
+                        <p className="text-base sm:text-lg text-(--color-text-secondary) leading-relaxed">
                             CAAF is an independent professional advisory firm delivering governance-driven
                             compliance and cybersecurity solutions. We focus on structured risk management
                             and regulatory defensibility, serving boards and executive leadership across
@@ -76,12 +76,12 @@ export default function AboutHero() {
                                 "
                             >
                                 <span
-                                    className="text-lg font-bold text-white lg:text-3xl"
+                                    className="text-lg font-bold text-(--color-text-primary) lg:text-3xl"
                                     style={{ fontFamily: 'Poppins, sans-serif' }}
                                 >
                                     {stat.value}
                                 </span>
-                                <span className="text-[10px] text-white/50 uppercase tracking-widest mt-0.5 lg:text-xs lg:mt-0 leading-tight">
+                                <span className="text-[10px] text-(--color-text-muted) uppercase tracking-widest mt-0.5 lg:text-xs lg:mt-0 leading-tight">
                                     {stat.label}
                                 </span>
                             </div>

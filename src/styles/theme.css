@@ -4,105 +4,73 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-    /* --- Primary: Professional Blue (FIXED — was oklch(45% 0.18 243)) --- */
-    --color-primary: oklch(55% 0.22 243);
-    --color-primary-dark: oklch(46% 0.20 243);
-    --color-primary-light: oklch(68% 0.20 243);
+    /* --- Primary: Premium Gold --- */
+    --color-primary: oklch(70% 0.15 75);
+    --color-primary-dark: oklch(60% 0.15 75);
+    --color-primary-light: oklch(80% 0.12 85);
 
-    /* --- Secondary: Accent Gold --- */
-    --color-secondary: oklch(62% 0.18 65);
-    --color-secondary-dark: oklch(54% 0.17 65);
-    --color-secondary-light: oklch(78% 0.15 80);
+    /* --- Secondary: Refined Gold / Accent --- */
+    --color-secondary: oklch(65% 0.12 70);
+    --color-secondary-dark: oklch(55% 0.11 70);
+    --color-secondary-light: oklch(85% 0.10 85);
 
-    /* --- Accent: Technology Teal --- */
-    --color-accent: oklch(55% 0.13 185);
-    --color-accent-dark: oklch(45% 0.13 185);
-    --color-accent-light: oklch(75% 0.13 185);
+    /* --- Accent: Deep Gold / Muted --- */
+    --color-accent: oklch(60% 0.10 75);
+    --color-accent-dark: oklch(50% 0.09 75);
+    --color-accent-light: oklch(75% 0.08 85);
 
-    /* --- Subtle tints (PRIORITY 6) --- */
-    --color-primary-subtle: color-mix(in oklch, var(--color-primary) 10%, transparent);
-    --color-secondary-subtle: color-mix(in oklch, var(--color-secondary) 10%, transparent);
-    --color-accent-subtle: color-mix(in oklch, var(--color-accent) 10%, transparent);
+    /* --- Subtle tints --- */
+    --color-primary-subtle: color-mix(in oklch, var(--color-primary) 12%, transparent);
+    --color-secondary-subtle: color-mix(in oklch, var(--color-secondary) 12%, transparent);
+    --color-accent-subtle: color-mix(in oklch, var(--color-accent) 12%, transparent);
 
-    /* --- Backgrounds (Light Mode) --- */
-    --color-background: oklch(98% 0.01 243);
+    /* --- Backgrounds (Refined: Faint Gold Off-white Default) --- */
+    --color-background: oklch(98% 0.01 85);
     --color-surface: oklch(100% 0 0 / 80%);
-    --color-card: oklch(100% 0 0 / 90%);
-    --color-elevated: oklch(100% 0 0 / 95%);
+    --color-card: oklch(100% 0 0 / 92%);
+    --color-elevated: oklch(99% 0.005 85 / 95%);
 
-    /* --- Text (Light Mode) --- */
-    --color-text-primary: oklch(20% 0.03 243);
-    --color-text-secondary: oklch(45% 0.04 243);
-    --color-text-muted: oklch(55% 0.03 243);
-    --color-text-inverse: oklch(100% 0 0);
+    /* --- Text (Dark Gold/Black for Light Mode) --- */
+    --color-text-primary: oklch(20% 0.02 75);
+    --color-text-secondary: oklch(35% 0.03 75);
+    --color-text-muted: oklch(50% 0.02 75);
+    --color-text-inverse: oklch(98% 0.01 85);
 
-    /* --- Borders (Light Mode) --- */
-    --color-border: oklch(92% 0.01 243 / 80%);
-    --color-border-light: oklch(96% 0.01 243 / 60%);
-    --color-border-strong: oklch(85% 0.02 243);
+    /* --- Borders --- */
+    --color-border: oklch(80% 0.05 75 / 20%);
+    --color-border-light: oklch(85% 0.05 75 / 10%);
+    --color-border-strong: oklch(70% 0.08 75 / 30%);
 
     /* --- Semantic States --- */
-    --color-success: oklch(65% 0.17 150);
-    --color-error: oklch(60% 0.20 25);
+    --color-success: oklch(65% 0.15 150);
+    --color-error: oklch(55% 0.18 25);
     --color-warning: oklch(75% 0.15 75);
-    --color-info: oklch(65% 0.15 243);
+    --color-info: oklch(65% 0.12 243);
 
     /* --- Button text tokens --- */
-    --color-button-text: oklch(100% 0 0);
-    --color-button-text-secondary: oklch(18% 0.06 65);
+    --color-button-text: oklch(14% 0.01 75);
+    --color-button-text-secondary: oklch(98% 0.01 85);
 
     /* --- Shadows --- */
-    --color-shadow: rgba(15, 23, 42, 0.1);
+    --color-shadow: rgba(45, 35, 15, 0.08);
 
     --color-white: oklch(100% 0 0);
     --color-black: oklch(0% 0 0);
 }
 
-/* Dark Mode — triggered by .dark class on <html> (set by ThemeToggle) */
+/* Dark Mode (Maintains Black/Gold aesthetic) */
 .dark {
-    /* Primary */
-    --color-primary: oklch(55% 0.18 243);
-    --color-primary-dark: oklch(45% 0.18 243);
-    --color-primary-light: oklch(75% 0.14 243);
-
-    /* Secondary */
-    --color-secondary: oklch(65% 0.20 65);
-    --color-secondary-dark: oklch(57% 0.18 65);
-    --color-secondary-light: oklch(80% 0.16 80);
-    --color-button-text-secondary: oklch(15% 0.05 65);
-
-    /* Subtle tints — re-evaluated against dark-mode token values */
-    --color-primary-subtle: color-mix(in oklch, var(--color-primary) 10%, transparent);
-    --color-secondary-subtle: color-mix(in oklch, var(--color-secondary) 10%, transparent);
-    --color-accent-subtle: color-mix(in oklch, var(--color-accent) 10%, transparent);
-
-    --color-accent: oklch(65% 0.13 185);
-    --color-accent-dark: oklch(55% 0.13 185);
-    --color-accent-light: oklch(80% 0.13 185);
-
-    /* Backgrounds */
-    --color-background: oklch(18% 0.02 243);
-    --color-background-gradient: linear-gradient(135deg, oklch(18% 0.02 243) 0%, oklch(13% 0.03 243) 100%);
-    --color-surface: oklch(22% 0.03 243);
-    --color-card: oklch(25% 0.03 243);
-    --color-elevated: oklch(30% 0.03 243);
+    --color-background: oklch(10% 0.01 243);
+    --color-background-gradient: linear-gradient(135deg, oklch(10% 0.01 243) 0%, oklch(6% 0.01 243) 100%);
+    --color-surface: oklch(14% 0.02 243);
+    --color-card: oklch(16% 0.02 243);
+    --color-elevated: oklch(20% 0.02 243);
 
     /* Text */
-    --color-text-primary: oklch(95% 0.01 243);
-    --color-text-secondary: oklch(85% 0.02 243);
-    --color-text-muted: oklch(70% 0.02 243);
-    --color-text-inverse: oklch(20% 0.03 243);
-
-    /* Borders */
-    --color-border: oklch(30% 0.03 243);
-    --color-border-light: oklch(25% 0.03 243);
-    --color-border-strong: oklch(40% 0.04 243);
-
-    /* States */
-    --color-success: oklch(75% 0.17 150);
-    --color-error: oklch(70% 0.20 25);
-    --color-warning: oklch(80% 0.15 75);
-    --color-info: oklch(75% 0.15 243);
+    --color-text-primary: oklch(95% 0.01 85);
+    --color-text-secondary: oklch(85% 0.02 85 / 80%);
+    --color-text-muted: oklch(70% 0.02 85 / 60%);
+    --color-text-inverse: oklch(14% 0.01 243);
 
     --color-shadow: rgba(0, 0, 0, 0.5);
 }
@@ -111,29 +79,29 @@
    Global CSS Variables & Utility Config
    ============================================= */
 :root {
-    /* --- Brand Colors (Light Mode) --- */
-    --color-primary: oklch(55% 0.22 243);
-    --color-primary-dark: oklch(46% 0.20 243);
-    --color-primary-light: oklch(68% 0.20 243);
+    /* --- Brand Colors --- */
+    --color-primary: oklch(70% 0.15 75);
+    --color-primary-dark: oklch(60% 0.15 75);
+    --color-primary-light: oklch(80% 0.12 85);
 
-    --color-secondary: oklch(62% 0.18 65);
-    --color-secondary-dark: oklch(54% 0.17 65);
-    --color-secondary-light: oklch(78% 0.15 80);
-    --color-button-text-secondary: oklch(18% 0.06 65);
+    --color-secondary: oklch(65% 0.12 70);
+    --color-secondary-dark: oklch(55% 0.11 70);
+    --color-secondary-light: oklch(85% 0.10 85);
+    --color-button-text-secondary: oklch(98% 0.01 85);
 
-    --color-accent: oklch(55% 0.13 185);
-    --color-accent-dark: oklch(45% 0.13 185);
-    --color-accent-light: oklch(75% 0.13 185);
+    --color-accent: oklch(60% 0.10 75);
+    --color-accent-dark: oklch(50% 0.09 75);
+    --color-accent-light: oklch(75% 0.08 85);
 
     /* Subtle tints */
-    --color-primary-subtle: color-mix(in oklch, var(--color-primary) 10%, transparent);
-    --color-secondary-subtle: color-mix(in oklch, var(--color-secondary) 10%, transparent);
-    --color-accent-subtle: color-mix(in oklch, var(--color-accent) 10%, transparent);
+    --color-primary-subtle: color-mix(in oklch, var(--color-primary) 12%, transparent);
+    --color-secondary-subtle: color-mix(in oklch, var(--color-secondary) 12%, transparent);
+    --color-accent-subtle: color-mix(in oklch, var(--color-accent) 12%, transparent);
 
-    --color-background-gradient: linear-gradient(135deg, oklch(98% 0.02 243) 0%, oklch(95% 0.04 250) 100%);
+    --color-background-gradient: linear-gradient(135deg, oklch(98% 0.01 85) 0%, oklch(95% 0.02 85) 100%);
     --gradient-primary: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
     --gradient-secondary: linear-gradient(135deg, var(--color-secondary) 0%, var(--color-accent) 100%);
-    --gradient-hero: linear-gradient(135deg, oklch(15% 0.04 243) 0%, oklch(25% 0.06 243) 50%, oklch(15% 0.04 243) 100%);
+    --gradient-hero: linear-gradient(135deg, var(--color-hero-from) 0%, var(--color-hero-mid) 50%, var(--color-hero-from) 100%);
 
     --shadow-sm: 0 1px 2px 0 var(--color-shadow);
     --shadow-md: 0 4px 6px -1px var(--color-shadow), 0 2px 4px -1px var(--color-shadow);
@@ -144,35 +112,35 @@
     --transition-normal: 300ms;
     --transition-slow: 500ms;
 
-    /* ─── Hero Section Tokens ─── */
-    --color-hero-from: oklch(16% 0.05 243);
-    --color-hero-mid: oklch(31% 0.20 261);
-    --color-hero-mid2: oklch(27% 0.10 219);
+    /* ─── Hero Section Tokens (REFINED: RICH GOLDEN) ─── */
+    --color-hero-from: oklch(65% 0.15 75);
+    --color-hero-mid: oklch(75% 0.15 85);
+    --color-hero-mid2: oklch(70% 0.12 80);
 
-    --color-hero-accent-gold: oklch(63% 0.16 55);
-    --color-hero-accent-gold-light: oklch(72% 0.17 65);
-    --color-hero-accent-gold-dark: oklch(52% 0.14 55);
+    --color-hero-accent-gold: oklch(85% 0.15 90);
+    --color-hero-accent-gold-light: oklch(92% 0.12 95);
+    --color-hero-accent-gold-dark: oklch(75% 0.15 75);
 
-    --color-hero-accent-blue: oklch(62% 0.21 258);
+    --color-hero-accent-blue: oklch(70% 0.12 70);
 
-    --color-hero-glow-blue: oklch(62% 0.21 258);
-    --color-hero-glow-teal: oklch(52% 0.13 183);
+    --color-hero-glow-blue: oklch(85% 0.15 90 / 30%);
+    --color-hero-glow-teal: oklch(70% 0.12 70 / 20%);
 }
 
-/* Dark mode hero overrides */
+/* Dark mode hero overrides (Maintain Dark Aesthetic) */
 .dark {
-    --color-hero-from: oklch(12% 0.04 243);
-    --color-hero-mid: oklch(27% 0.21 261);
-    --color-hero-mid2: oklch(22% 0.11 219);
+    --color-hero-from: oklch(12% 0.02 75);
+    --color-hero-mid: oklch(18% 0.04 70);
+    --color-hero-mid2: oklch(14% 0.02 75);
 
-    --color-hero-accent-gold: oklch(67% 0.17 55);
-    --color-hero-accent-gold-light: oklch(76% 0.18 65);
-    --color-hero-accent-gold-dark: oklch(57% 0.15 55);
+    --color-hero-accent-gold: oklch(78% 0.16 75);
+    --color-hero-accent-gold-light: oklch(88% 0.13 85);
+    --color-hero-accent-gold-dark: oklch(68% 0.16 75);
 
-    --color-hero-accent-blue: oklch(66% 0.22 258);
+    --color-hero-accent-blue: oklch(72% 0.13 70);
 
-    --color-hero-glow-blue: oklch(66% 0.22 258);
-    --color-hero-glow-teal: oklch(58% 0.14 183);
+    --color-hero-glow-blue: oklch(78% 0.16 75 / 40%);
+    --color-hero-glow-teal: oklch(72% 0.13 70 / 30%);
 }
 
 /* =============================================

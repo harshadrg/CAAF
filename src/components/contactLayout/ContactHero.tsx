@@ -1,7 +1,7 @@
 const meta = [
-    { value: '1 day',  label: 'Initial Response'    },
-    { value: '5 days', label: 'Advisory Proposal'   },
-    { value: 'NDA',    label: 'Confidential'         },
+    { value: '1 day', label: 'Initial Response' },
+    { value: '5 days', label: 'Advisory Proposal' },
+    { value: 'NDA', label: 'Confidential' },
 ];
 
 export default function ContactHero() {
@@ -45,16 +45,16 @@ export default function ContactHero() {
 
                     {/* Left: text */}
                     <div className="max-w-2xl">
-                        <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-white/50 mb-5">
+                        <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-(--color-text-muted) mb-5">
                             Contact
                         </span>
                         <h1
-                            className="text-white mb-5"
+                            className="text-(--color-text-primary) mb-5"
                             style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800 }}
                         >
                             Engage With CAAF
                         </h1>
-                        <p className="text-base sm:text-lg text-white/70 leading-relaxed">
+                        <p className="text-base sm:text-lg text-(--color-text-secondary) leading-relaxed">
                             We partner with organizations seeking structured governance, regulatory clarity,
                             and secure digital growth. Complete the form to initiate an advisory engagement discussion.
                         </p>
@@ -74,12 +74,12 @@ export default function ContactHero() {
                                 "
                             >
                                 <span
-                                    className="text-lg font-bold text-white lg:text-2xl"
+                                    className="text-lg font-bold text-(--color-text-primary) lg:text-2xl"
                                     style={{ fontFamily: 'Poppins, sans-serif' }}
                                 >
                                     {item.value}
                                 </span>
-                                <span className="text-[10px] text-white/50 uppercase tracking-widest mt-0.5 lg:text-xs lg:mt-0 leading-tight">
+                                <span className="text-[10px] text-(--color-text-muted) uppercase tracking-widest mt-0.5 lg:text-xs lg:mt-0 leading-tight">
                                     {item.label}
                                 </span>
                             </div>

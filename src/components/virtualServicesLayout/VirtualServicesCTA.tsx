@@ -52,14 +52,14 @@ export default function VirtualServicesCTA() {
                         />
                         <h2
                             id="virtual-cta-heading"
-                            className="text-white text-left"
+                            className="text-(--color-text-primary) text-left"
                             style={{ fontFamily: 'Poppins, sans-serif' }}
                         >
                             Schedule an Executive Consultation
                         </h2>
                     </div>
 
-                    <p className="text-white/70 leading-relaxed mb-8">
+                    <p className="text-(--color-text-secondary) leading-relaxed mb-8">
                         Discuss your organization's governance and compliance requirements with our advisory team.
                         We'll assess your needs and recommend the appropriate virtual executive engagement model.
                     </p>

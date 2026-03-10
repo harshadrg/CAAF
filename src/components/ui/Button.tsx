@@ -58,7 +58,7 @@ const variantStyles: Record<ButtonVariant, string> = {
     // ── Hero / dark-background variants ───────────────────────────────────
     'hero-gold':
         'bg-(--color-hero-accent-gold) hover:bg-(--color-hero-accent-gold-dark) ' +
-        'text-white shadow-lg shadow-amber-900/30 ' +
+        'text-(--color-button-text) shadow-lg shadow-black/30 ' +
         'active:scale-[0.98] transition-all duration-150',
 
     'outline-inverse':
@@ -68,8 +68,8 @@ const variantStyles: Record<ButtonVariant, string> = {
 
     // ── CTA section variant — white button on coloured background ─────────
     'cta-light':
-        'bg-white hover:bg-gray-50 border border-gray-200 ' + // Added border and slightly darker hover
-        'text-[var(--color-primary-dark)] shadow-md hover:shadow-lg ' +
+        'bg-(--color-white) hover:bg-(--color-surface) border border-(--color-border) ' +
+        'text-(--color-primary-dark) shadow-md hover:shadow-lg ' +
         'active:scale-[0.98] transition-all duration-150',
 
     // ── Inline link variant — no padding, flush with surrounding text ─────

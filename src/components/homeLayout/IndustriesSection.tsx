@@ -92,7 +92,7 @@ export default function IndustriesSection() {
                 }
             `}</style>
 
-            <div className="container-max px-4 sm:px-6 lg:px-8">
+            <div className="container-max  lg:px-8">
                 <div className="max-w-2xl mx-auto text-center mb-10 sm:mb-12">
                     <span className="inline-block text-xs font-semibold uppercase tracking-[0.2em] text-(--color-primary) mb-4">
                         Sectors
@@ -112,8 +112,8 @@ export default function IndustriesSection() {
 
                 {/* Three traffic lanes — alternating direction and speed */}
                 <div className="flex flex-col gap-3 mb-10 w-full">
-                    <TickerRow items={industries} direction="left" duration={28} />
-                    <TickerRow items={industries} direction="right" duration={20} />
+                    <TickerRow items={industries} direction="left" duration={30} />
+                    <TickerRow items={industries} direction="right" duration={26} />
                 </div>
 
                 <div className="text-center">
